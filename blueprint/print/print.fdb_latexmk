@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1722426513.46275 "print.tex" "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.pdf" "print" 1722426514.32728 0
-  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.aux" 1722426514.12015 234 44cfa93580110f5bdc2c3c0199a36f3e "pdflatex"
-  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.out" 1722426513.93115 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["pdflatex"] 1722842215.45552 "print.tex" "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.pdf" "print" 1722842216.35635 0
+  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.aux" 1722842216.13454 3389 9986f5bb805a7d456894f1ab84f2a2a4 "pdflatex"
+  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.out" 1722842216.13454 684 cd11907768ebb096d11426bf84b99804 "pdflatex"
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -83,10 +83,12 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719785820 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1722380463 10868501 e521c25442cce99c56ff9a77d153050d ""
   "/usr/local/texlive/2024/texmf.cnf" 1722380410.43027 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "content.tex" 1722426507.36388 1013 127fde10c82afc237f22f137d2d5379f ""
-  "macros/common.tex" 1722424368.23936 548 4554adb8a1b3c5da12b67499d6b2b610 ""
+  "chapters/basics.tex" 1722842210.89455 9444 d7c98278eb22bd3c0fd530b347cabe4f ""
+  "chapters/main.tex" 1722838314.15515 270 abcdeb6fca3851372d9a5ff1023c4753 ""
+  "content.tex" 1722838307.94514 917 7d022bbdd7c27336a23d62a729ff0c4b ""
+  "macros/common.tex" 1722759673.52174 604 ca3e9443483cfefd693019fb112f2d18 ""
   "macros/print.tex" 1722422546.45932 1101 87627b2ec24fef68edc71c13f43f7bab ""
-  "print.tex" 1722422546.45932 1131 bf5d368546e76888c21bf562766212eb ""
+  "print.tex" 1722837065.5925 1131 bf5d368546e76888c21bf562766212eb ""
   (generated)
   "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.aux"
   "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.log"

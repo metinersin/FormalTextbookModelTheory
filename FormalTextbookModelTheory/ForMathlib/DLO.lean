@@ -3,19 +3,34 @@ import Mathlib.ModelTheory.Basic
 import Mathlib.ModelTheory.Syntax
 import Mathlib.ModelTheory.Semantics
 import Mathlib.ModelTheory.Satisfiability
+import Mathlib.ModelTheory.Bundled
 import Mathlib.ModelTheory.Order
+import Mathlib.Order.CountableDenseLinearOrder
+import FormalTextbookModelTheory.ForMathlib.Order
 
 open Cardinal
 open FirstOrder
+open Language
+open Order
 
-universe u v w
+namespace FirstOrder.Language.Order
 
-notation "L≤" => Language.order
+-- def to_Lle_homomorphism {M N : Type w} [L≤.Structure M] [L≤.Structure N] (f : M →o N) : M →[L≤] N :=
+--   by sorry
 
 theorem aleph0_categorical_of_dlo : aleph0.Categorical L≤.dlo := by
+  unfold Categorical
+  rintro ⟨M⟩ ⟨N⟩ hM hN
+  simp only at *
+  constructor
+
+  have instLinearOrderM : LinearOrder M := by exact inst_LinearOrder_of_dlo L≤
+  have instLinearOrderN : LinearOrder N := by exact inst_LinearOrder_of_dlo L≤
+  have instDensolyOrderedM : @DenselyOrdered M (inst_Preorder_of_dlo L≤).toLT := by
+    exact inst_DenselyOrdered_of_dlo L≤
+
   sorry
 
-#check aleph0_categorical_of_dlo
+#check iso_of_countable_dense
 
--- Here, we will put definitions and theorems about the theory
--- of dense linear orders without endpoints.
+end FirstOrder.Language.Order

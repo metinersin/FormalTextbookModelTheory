@@ -23,31 +23,30 @@ abbrev excludedRootNames : NameSet := NameSet.empty
   |>.insert `Batteries
   |>.insert `Mathlib
 
-def userDefinedModules : CommandElabM (Array Name) := do
-  let env ← getEnv
+def userDefinedModules (env : Environment) : Array Name := by
   let allowedImports := env.allImportedModuleNames.filter (!excludedRootNames.contains ·.getRoot)
-  return allowedImports.qsort Name.lt
+  exact allowedImports.qsort Name.lt
 
 def test_userDefinedModules : CommandElabM Unit := do
-  let modules ← userDefinedModules
+  let env ← getEnv
+  let modules := userDefinedModules env
   logInfo modules.toList.toString
 
 def moduleNameToFileName (moduleName : Name) : System.FilePath :=
   System.FilePath.addExtension (System.mkFilePath $ moduleName.toString.splitOn ".") "lean"
 
 def test_moduleNameToFileName : CommandElabM Unit := do
-  let modules ← userDefinedModules
+  let env ← getEnv
+  let modules := userDefinedModules env
   let mut fnames := #[]
   for module in modules do
     fnames := fnames.push (moduleNameToFileName module)
   logInfo fnames.toList.toString
 
-def userDefinedDecls : CommandElabM (Array Name) := do
-  let env ← getEnv
-  --
+def userDefinedDecls (env : Environment) : Array Name := Id.run do
   let mut modIdx : HashSet Nat := .empty
   let mut modsSeen : NameSet := .empty
-  let allowedImports ← userDefinedModules
+  let allowedImports := userDefinedModules env
   for imp in allowedImports do
     if let some nm := env.getModuleIdx? imp then
       modIdx := modIdx.insert nm
@@ -78,30 +77,33 @@ def userDefinedDecls : CommandElabM (Array Name) := do
     newDeclNamesFiltered := newDeclNamesFiltered.push decl
   return newDeclNamesFiltered.qsort Name.lt
 
+
 def test_userDefinedDecls : CommandElabM Unit := do
-  let decls ← userDefinedDecls
+  let env ← getEnv
+  let decls := userDefinedDecls env
   logInfo decls.size.repr
   logInfo decls.toList.toString
 
-def getDocstring (decl : Name) : CoreM (Option String) := do
-  return ← findDocString? (← getEnv) decl
+def getDocstring (env : Environment) (decl : Name) : IO $ Option String := do
+  return ← findDocString? env decl
 
 def test_getDocstring : CoreM Unit := do
-  let doc ← getDocstring `FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo
+  let env ← getEnv
+  let doc ← getDocstring env `FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo
   IO.println doc
 
 
 /-- extracts the names of the declarations in `env` on which `decl` depends. -/
 -- source:
 -- https://leanprover.zulipchat.com/#narrow/stream/287929-mathlib4/topic/Counting.20prerequisites.20of.20a.20theorem/near/425370265
-def getVisited (env : Environment) (decl : Name) :=
+def getVisited (env : Environment) (decl : Name) : NameSet :=
   let (_, { visited, .. }) := Elab.Command.CollectAxioms.collect decl |>.run env |>.run {}
   visited
 
 def getDependencies (decl : Name) : CommandElabM (Array Name) := do
   let env ← getEnv
   let visited := (getVisited env decl).toArray
-  let decls ← userDefinedDecls
+  let decls := userDefinedDecls env
   let visited := visited.filter $ fun name => name ∈ decls ∧ name ≠ decl
   return visited
 

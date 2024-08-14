@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.31)  5 AUG 2024 10:16
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.7.31)  14 AUG 2024 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,36 +683,21 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 9.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 9.
-
-
-LaTeX Warning: Reference `lem:reflexive-in-linearOrderTheory' on page 1 undefin
-ed on input line 78.
-
-
-LaTeX Warning: Reference `lem:transitive-in-linearOrderTheory' on page 1 undefi
-ned on input line 89.
-
-
-LaTeX Warning: Reference `lem:antisymmetric-in-linearOrderTheory' on page 1 und
-efined on input line 100.
-
-
-LaTeX Warning: Reference `lem:total-in-linearOrderTheory' on page 1 undefined o
-n input line 111.
-
-
+)
 
 [1
 
 ]
-
-[2])
-
-[3]
 Chapter 2.
+(./chapters/model_theory.tex)
+
+[2
+
+]
+Chapter 3.
 (./chapters/main.tex))
 
-[4
+[3
 
 ]
 (/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.aux)
@@ -720,20 +705,17 @@ Chapter 2.
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
  ***********
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `print.out' has not changed.
-(rerunfilecheck)             Checksum: CD11907768EBB096D11426BF84B99804;684.
+(rerunfilecheck)             Checksum: 0E20A0F58D1D7838FFC59F27F356D900;935.
  ) 
 Here is how much of TeX's memory you used:
- 16803 strings out of 474240
- 310097 string characters out of 5742353
- 1932557 words of memory out of 5000000
- 39281 multiletter control sequences out of 15000+600000
+ 16792 strings out of 474240
+ 309351 string characters out of 5742353
+ 1929557 words of memory out of 5000000
+ 39267 multiletter control sequences out of 15000+600000
  563440 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,6n,116p,542b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,6n,116p,542b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on /home/metinersin/projects/FormalTextbookModelTheory/blueprint
-/print/print.pdf (5 pages).
+/print/print.pdf (4 pages).

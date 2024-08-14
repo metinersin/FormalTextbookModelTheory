@@ -12,6 +12,8 @@ require "leanprover-community" / "mathlib"
 
 @[default_target]
 lean_lib «FormalTextbookModelTheory» where
+
+-- lean_lib AutoBlueprint where
   -- add any library configuration options here
 
 require checkdecls from git "https://github.com/PatrickMassot/checkdecls.git"

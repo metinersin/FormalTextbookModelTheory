@@ -192,6 +192,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./chapters/model_theory.tex
+INPUT ./chapters/model_theory.tex
+INPUT chapters/model_theory.tex
 INPUT ./chapters/main.tex
 INPUT ./chapters/main.tex
 INPUT chapters/main.tex

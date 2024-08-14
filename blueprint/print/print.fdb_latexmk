@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1722842215.45552 "print.tex" "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.pdf" "print" 1722842216.35635 0
-  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.aux" 1722842216.13454 3389 9986f5bb805a7d456894f1ab84f2a2a4 "pdflatex"
-  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.out" 1722842216.13454 684 cd11907768ebb096d11426bf84b99804 "pdflatex"
+["pdflatex"] 1723661794.7511 "print.tex" "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.pdf" "print" 1723661795.69292 0
+  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.aux" 1723661795.4694 2232 b6b67c3fcb3329da2c254c2d8baad30a "pdflatex"
+  "/home/metinersin/projects/FormalTextbookModelTheory/blueprint/print/print.out" 1723661795.4694 935 0e20a0f58d1d7838ffc59f27f356d900 "pdflatex"
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -83,9 +83,10 @@
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1719785820 42007 0b741a3c21a5ca32b40e3846e75b3548 ""
   "/usr/local/texlive/2024/texmf-var/web2c/xetex/xelatex.fmt" 1722380463 10868501 e521c25442cce99c56ff9a77d153050d ""
   "/usr/local/texlive/2024/texmf.cnf" 1722380410.43027 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "chapters/basics.tex" 1722842210.89455 9444 d7c98278eb22bd3c0fd530b347cabe4f ""
-  "chapters/main.tex" 1722838314.15515 270 abcdeb6fca3851372d9a5ff1023c4753 ""
-  "content.tex" 1722838307.94514 917 7d022bbdd7c27336a23d62a729ff0c4b ""
+  "chapters/basics.tex" 1723659066.66334 2441 b48c6cf0620ad41684aeac4b58dc95e7 ""
+  "chapters/main.tex" 1723661787.37893 321 18d95ad5a64d5d1a73dc8caacf660dd9 ""
+  "chapters/model_theory.tex" 1723659684.69707 2076 ed78731b4190e4a400ab523aaea36373 ""
+  "content.tex" 1723660673.45768 1004 792b81f5308bf1a333bd495ff2e0fd5a ""
   "macros/common.tex" 1722759673.52174 604 ca3e9443483cfefd693019fb112f2d18 ""
   "macros/print.tex" 1722422546.45932 1101 87627b2ec24fef68edc71c13f43f7bab ""
   "print.tex" 1722837065.5925 1131 bf5d368546e76888c21bf562766212eb ""

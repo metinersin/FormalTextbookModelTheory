@@ -3,259 +3,95 @@
 %%% Really trivial stuff about numbers, vectors, etc.
 
 \begin{lemma}
-    \label{lem:two-vector-notation}
+    \label{lem:vector-notation}
     \lean{Matrix.Vector_eq_VecNotation₂}
     \leanok
-    For any vector $v : \Fin 2 \to \bbn$, we have $v = ![v(0), v(1)]$.
+    For any vector $v : \Fin 2 \to X$, we have $v = ![v(0), v(1)]$.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
+
+\begin{lemma}
+    \label{lem:vector-notation-under-composition}
+    \lean{Matrix.comp_VecNotation₂}
+    \leanok
+    For any function $f : X \to Y$ and elements $x_1, x_2 \in X$, we have $f \circ ![x_1, x_2] = ![f(x_1), f(x_2)]$.
+\end{lemma}
+\begin{proof}
+    \leanok
+\end{proof}
+
 %%%
 
 \section{Theories}
 %%% Really trivial stuff about theories
 
 \begin{lemma}
-    \label{lem:linear-order-theory-in-dlo}
-    \lean{FirstOrder.Language.Order.linearOrderTheory_subset_dlo}
+    \label{lem:realize-reflexivity}
+    \lean{FirstOrder.Language.Order.DLO.realize_reflexive}
     \leanok
-    The theory of linear orders is a subset of DLO.
-\end{lemma}
-\begin{proof}
-    \leanok
-\end{proof}
-
-%%%% LinearOrder
-\begin{lemma}
-    \label{lem:reflexive-in-linear-order-theory}
-    \lean{FirstOrder.Language.Order.reflexive_in_linearOrderTheory}
-    \leanok
-    The theory of linear orders contains the reflexivity sentence.
+    Models of the theory of dense linear orders realize the reflexivity sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:transitive-in-linear-order-theory}
-    \lean{FirstOrder.Language.Order.transitive_in_linearOrderTheory}
+    \label{lem:realize-transitivity}
+    \lean{FirstOrder.Language.Order.DLO.realize_transitive}
     \leanok
-    The theory of linear orders contains the transitivity sentence.
+    Models of the theory of dense linear orders realize the transitivity sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:antisymmetric-in-linear-order-theory}
-    \lean{FirstOrder.Language.Order.antisymmetric_in_linearOrderTheory}
+    \label{lem:realize-antisymmetric}
+    \lean{FirstOrder.Language.Order.DLO.realize_antisymmetric}
     \leanok
-    The theory of linear orders contains the antisymmetry sentence.
+    Models of the theory of dense linear orders realize the antisymmetry sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:total-in-linear-order-theory}
-    \lean{FirstOrder.Language.Order.total_in_linearOrderTheory}
+    \label{lem:realize-total}
+    \lean{FirstOrder.Language.Order.DLO.realize_total}
     \leanok
-    The theory of linear orders contains the totality sentence.
+    Models of the theory of dense linear orders realize the totality sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:models-of-linearOrderTheory-realize-reflexive}
-    \lean{FirstOrder.Language.Order.realize_reflexive_of_model_linearOrderTheory}
+    \label{lem:realize-densely-ordered}
+    \lean{FirstOrder.Language.Order.DLO.realize_denselyOrderedSentence}
     \leanok
-    Models of the theory of linear orders realize the reflexivity sentence.
+    Models of the theory of dense linear orders realize the densely ordered sentence.
 \end{lemma}
 \begin{proof}
     \leanok
-    \uses{lem:reflexive-in-linearOrderTheory}
 \end{proof}
 
 \begin{lemma}
-    \label{lem:models-of-linearOrderTheory-realize-transitive}
-    \lean{FirstOrder.Language.Order.realize_transitive_of_model_linearOrderTheory}
+    \label{lem:realize-no-min}
+    \lean{FirstOrder.Language.Order.DLO.realize_noBotOrderSentence}
     \leanok
-    Models of the theory of linear orders realize the transitivity sentence.
+    Models of the theory of dense linear orders realize no minimum sentence.
 \end{lemma}
 \begin{proof}
     \leanok
-    \uses{lem:transitive-in-linearOrderTheory}
 \end{proof}
 
 \begin{lemma}
-    \label{lem:models-of-linearOrderTheory-realize-antisymmetric}
-    \lean{FirstOrder.Language.Order.realize_antisymmetric_of_model_linearOrderTheory}
+    \label{lem:realize-no-max}
+    \lean{FirstOrder.Language.Order.DLO.realize_noTopOrderSentence}
     \leanok
-    Models of the theory of linear orders realize the antisymmetry sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:antisymmetric-in-linearOrderTheory}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:models-of-linearOrderTheory-realize-total}
-    \lean{FirstOrder.Language.Order.realize_total_of_model_linearOrderTheory}
-    \leanok
-    Models of the theory of linear orders realize the totality sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:total-in-linearOrderTheory}
-\end{proof}
-
-%%%%
-
-%%%% DLO
-\begin{lemma}
-    \label{lem:reflexive-in-dlo}
-    \lean{FirstOrder.Language.Order.reflexive_in_dlo}
-    \leanok
-    The theory DLO contains the reflexivity sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:linear-order-theory-in-dlo, lem:reflexive-in-linear-order-theory}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:transitive-in-dlo}
-    \lean{FirstOrder.Language.Order.transitive_in_dlo}
-    \leanok
-    The theory DLO contains the transitivity sentence
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:linear-order-theory-in-dlo, lem:transitive-in-linear-order-theory}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:antisymmetric-in-dlo}
-    \lean{FirstOrder.Language.Order.antisymmetric_in_dlo}
-    \leanok
-    The theory DLO contains the antisymmetry sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:linear-order-theory-in-dlo, lem:antisymmetric-in-linear-order-theory}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:total-in-dlo}
-    \lean{FirstOrder.Language.Order.total_in_dlo}
-    \leanok
-    The theory DLO contains the totality sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:linear-order-theory-in-dlo, lem:total-in-linear-order-theory}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:models-of-dlo-realize-reflexivity}
-    \lean{FirstOrder.Language.Order.realize_reflexive_of_model_dlo}
-    \leanok
-    Models of the theory DLO realize the reflexivity sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:reflexive-in-dlo}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:models-of-dlo-realize-transitivity}
-    \lean{FirstOrder.Language.Order.realize_transitive_of_model_dlo}
-    \leanok
-    Models of the theory DLO realize the transitivity sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:transitive-in-dlo}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:models-of-dlo-realize-antisymmetric}
-    \lean{FirstOrder.Language.Order.realize_antisymmetric_of_model_dlo}
-    \leanok
-    Models of the theory DLO realize the antisymmetry sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:antisymmetric-in-dlo}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:models-of-dlo-realize-total}
-    \lean{FirstOrder.Language.Order.realize_total_of_model_dlo}
-    \leanok
-    Models of the theory DLO realize the totality sentence.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:total-in-dlo}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:models-of-dlo-models-of-linear-order-theory}
-    \lean{FirstOrder.Language.Order.model_linearOrderTheory_of_model_dlo}
-    \leanok
-    Models of DLO are also models of the theory of linear orders.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:linear-order-theory-in-dlo}
-\end{proof}
-
-%%%%
-
-%%%
-
-\section{Instances}
-%%% Simple instances and instance chains
-
-\begin{definition}
-    \label{def:le-instance-ordered-language}
-    \lean{FirstOrder.Language.Order.inst_LE_of_IsOrdered}
-    \leanok
-    Any structure of an ordered language is an ordered set.
-\end{definition}
-
-\begin{definition}
-    \label{def:preorder-instance-models-of-dlo}
-    \lean{FirstOrder.Language.Order.inst_Preorder_of_dlo}
-    \leanok
-    \uses{def:le-instance-ordered-language, lem:models-of-dlo-realize-reflexivity, lem:models-of-dlo-realize-transitivity}
-    statement of your definition
-\end{definition}
-
-\begin{definition}
-    \label{def:linear-order-instance-models-of-dlo}
-    \lean{FirstOrder.Language.Order.inst_LinearOrder_of_dlo}
-    \leanok
-    \uses{def:preorder-instance-models-of-dlo, lem:models-of-dlo-realize-antisymmetric, lem:models-of-dlo-realize-total}
-    statement of your definition
-\end{definition}
-
-\begin{definition}
-    \label{def:binary-relational-language}
-    \lean{FirstOrder.Language.IsRelational₂}
-    \leanok
-    A language is binary relational if it has onyl binary relation symbols.
-\end{definition}
-
-\begin{lemma}
-    \label{lem:canonical-ordered-language-binary-relational}
-    \lean{FirstOrder.Language.Order.instIsRelational₂}
-    \leanok
-    \uses{def:binary-relational-language}
-    The canonical ordered language consisting of a single binary relation $\leq$ is a binary relational language.
+    Models of the theory of dense linear orders realize no maximum sentence.
 \end{lemma}
 \begin{proof}
     \leanok
@@ -263,74 +99,4 @@
 
 %%%
 
-\section{Structures}
-%%% Equality of structures for relational languages
-
-\begin{lemma}
-    \label{lem:structure-funmap-relational-language}
-    \lean{FirstOrder.Language.Structure.funMap_eq_funMap_of_relational}
-    \leanok
-    Structures of a relational language have equal function maps. 
-\end{lemma}
-\begin{proof}
-    \leanok
-\end{proof}
-
-\begin{lemma}
-    \label{lem:equality-of-structures-relational-language}
-    \lean{FirstOrder.Language.Structure.structure_eq_structure_of_relational_iff}
-    \leanok
-    Two structures of a relational language are equal if and only if they agree on the 
-    interpretation of all relation symbols.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:structure-funmap-relational-language}
-\end{proof}
-
-%%%
-
-%%% Equality of structures for binary relational languages
-
-\begin{lemma}
-    \label{lem:structure-relmap-binary-relational-language}
-    \lean{FirstOrder.Language.Structure.RelMap_eq_RelMap_of_relational₂}
-    \leanok
-    \uses{def:binary-relational-language}
-    Two structures of a binary relational language have equal relation maps if and only 
-    if they agree on the interpretation of all binary relation symbols.
-\end{lemma}
-\begin{proof}
-    \leanok
-\end{proof}
-
-\begin{lemma}
-    \label{lem:equality-of-structures-binary-relational-language}
-    \lean{FirstOrder.Language.Structure.structure_eq_of_structure_of_relational₂_iff}
-    \leanok
-    \uses{def:binary-relational-language}
-    Two structures of a binary relational language are equal if and only if they agree on the 
-    interpretation of all binary relation symbols.
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{lem:structure-relmap-binary-relational-language, lem:equality-of-structures-relational-language}
-\end{proof}
-
-\begin{lemma}
-    \label{lem:orders-coincide-for-ordered-structures}
-    \lean{FirstOrder.Language.Order.orderStructure_of_LE_of_structure}
-    \leanok
-    \uses{def:le-instance-ordered-language}
-    statement of your lemma
-\end{lemma}
-\begin{proof}
-    \leanok
-    \uses{def:le-instance-ordered-language, 
-          lem:canonical-ordered-language-binary-relational, 
-          lem:equality-of-structures-binary-relational-language,
-          lem:two-vector-notation}
-\end{proof}
-
-%%%
 

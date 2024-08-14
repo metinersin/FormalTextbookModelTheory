@@ -1,0 +1,67 @@
+\section{Instances}
+%%% Simple instances
+
+\begin{definition}
+    \label{def:le-instance-language-order}
+    \lean{FirstOrder.Language.Order.instLE}
+    \leanok
+    Any structure of the language of orders is an ordered set.
+\end{definition}
+
+\begin{lemma}
+    \label{lem:order-structure-of-le}
+    \lean{FirstOrder.Language.Order.orderStructure_of_LE}
+    \leanok
+    \uses{def:le-instance-language-order}
+    The structure induced from $\le$ which is induced from another structure is equal to the original structure.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{def:le-instance-language-order, lem:vector-notation}
+\end{proof}
+
+\begin{definition}
+    \label{def:preorder-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instPreorder}
+    \leanok
+    \uses{def:le-instance-language-order, lem:realize-reflexivity, lem:realize-transitivity}
+    Models of the theory of dense linear orders are preorders.
+\end{definition}
+
+\begin{definition}
+    \label{def:linearorder-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instLinearOrder}
+    \leanok
+    \uses{def:le-instance-language-order, def:preorder-dlo, lem:realize-antisymmetric, lem:realize-total}
+    Models of the theory of dense linear orders are linear orders.
+\end{definition}
+
+%%%
+
+\section{Homomorphisms}
+
+\begin{lemma}
+    \label{lem:to-embedding}
+    \lean{FirstOrder.Language.Order.toLEmbedding}
+    \leanok
+    \uses{def:le-instance-language-order}    
+    A function which is an order embedding is also an embedding in the model theoretic sense.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{def:le-instance-language-order, lem:vector-notation, lem:vector-notation-under-composition}    
+\end{proof}
+
+\begin{lemma}
+    \label{lem:to-isomorphism}
+    \lean{FirstOrder.Language.Order.toLIso}
+    \leanok
+    \uses{def:le-instance-language-order}
+    A function which is an order isomorphism is also an isomorphism in the model theoretic sense.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{def:le-instance-language-order, lem:vector-notation, lem:vector-notation-under-composition, lem:to-embedding}
+\end{proof}
+
+

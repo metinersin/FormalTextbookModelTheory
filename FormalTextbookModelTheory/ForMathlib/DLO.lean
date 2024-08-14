@@ -14,7 +14,7 @@ open Cardinal
 open FirstOrder Language Structure Theory Order
 open Matrix (Vector_eq_VecNotation₂ comp_VecNotation₂)
 
-namespace FirstOrder.Language.Order --region
+namespace FirstOrder.Language.Order
 
 section
 
@@ -243,4 +243,4 @@ theorem aleph0_categorical_of_dlo : aleph0.Categorical Language.order.dlo := by
 
 end DLO --end
 
-end FirstOrder.Language.Order --end
+end FirstOrder.Language.Order

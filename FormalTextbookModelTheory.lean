@@ -1,2 +1,3 @@
-import FormalTextbookModelTheory.ForMathlib.Matrix
-import FormalTextbookModelTheory.ForMathlib.DLO
+import FormalTextbookModelTheory.ForMathlib.Data.Fin.VecNotation
+import FormalTextbookModelTheory.ForMathlib.ModelTheory.Order
+import FormalTextbookModelTheory.ForMathlib.ModelTheory.DLO

@@ -1,4 +1,7 @@
 \section{Instances}
+
+Mathlib already contains a proof for the categoricity of the theory of dense linear orders without end points but it is written in terms of various instances such as `DenselyOrdered`. In this section, we produce these instances for a `FirstOrder.Language.Order` structure.
+
 %%% Simple instances
 
 \begin{definition}
@@ -20,25 +23,119 @@
     \uses{def:le-instance-language-order, lem:vector-notation}
 \end{proof}
 
-\begin{definition}
-    \label{def:preorder-dlo}
+\begin{lemma}
+    \label{lem:instOrderedStructureOrder_formalTextbookModelTheory}
+    \lean{FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{def:le-instance-language-order}
+    By definition, the binary relation $\le$ is equal to the interpretation of the unique binary relation symbol of the language `Language.order`.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:order-structure-of-le}
+\end{proof}
+
+\begin{lemma}
+    \label{lem:preorder-dlo}
     \lean{FirstOrder.Language.Order.DLO.instPreorder}
     \leanok
-    \uses{def:le-instance-language-order, lem:realize-reflexivity, lem:realize-transitivity}
-    Models of the theory of dense linear orders are preorders.
-\end{definition}
+    \uses{def:le-instance-language-order}
+    Models of the theory of dense linear orders without end points are preorders.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:reflexive_mem_dlo, lem:transitive_mem_dlo}
+\end{proof}
 
-\begin{definition}
-    \label{def:linearorder-dlo}
+\begin{lemma}
+    \label{lem:partial-order-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instPartialOrder}
+    \leanok
+    \uses{lem:preorder-dlo}
+    Models of the theory of dense linear orders without end points are partial orders.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:antisymmetric_mem_dlo}
+\end{proof}
+
+\begin{lemma}
+    \label{lem:linearorder-dlo}
     \lean{FirstOrder.Language.Order.DLO.instLinearOrder}
     \leanok
-    \uses{def:le-instance-language-order, def:preorder-dlo, lem:realize-antisymmetric, lem:realize-total}
-    Models of the theory of dense linear orders are linear orders.
-\end{definition}
+    \uses{lem:partial-order-dlo}
+    Models of the theory of dense linear orders without end points are linear orders.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:total_mem_dlo}
+\end{proof}
+
+\begin{lemma}
+    \label{lem:no-bot-order-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{lem:linearorder-dlo}
+    Models of the theory of dense linear orders without end points do not have a bottom element.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:noBotOrder_mem_dlo, lem:realize_noBot}
+\end{proof}
+
+\begin{lemma}
+    \label{lem:no-min-order-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{lem:linearorder-dlo}
+    Models of the theory of dense linear orders without end points do not have a minimum element.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:no-bot-order-dlo}
+\end{proof}
+
+\begin{lemma}
+    \label{lem:no-top-order-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{lem:linearorder-dlo}
+    Models of the theory of dense linear orders without end points do not have a top element.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:noTopOrder_mem_dlo, lem:realize_noTop}
+\end{proof}
+
+\begin{lemma}
+    \label{lem:no-max-order-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{lem:linearorder-dlo}
+    Models of the theory of dense linear orders without end points do not have a maximum element.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:no-top-order-dlo}
+\end{proof}
+
+\begin{lemma}
+    \label{lem:densely-ordered-dlo}
+    \lean{FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory}
+    \leanok
+    \uses{lem:linearorder-dlo}
+    Models of the theory of dense linear orders without end points are densely ordered.
+\end{lemma}
+\begin{proof}
+    \leanok
+    \uses{lem:denselyOrdered_mem_dlo, lem:realize_denselyOrdered}
+\end{proof}
 
 %%%
 
 \section{Homomorphisms}
+
+We also need to show that maps respecting the order structure are homomorphisms in the model theoretic sense.
 
 \begin{lemma}
     \label{lem:to-embedding}
@@ -49,7 +146,7 @@
 \end{lemma}
 \begin{proof}
     \leanok
-    \uses{def:le-instance-language-order, lem:vector-notation, lem:vector-notation-under-composition}    
+    \uses{def:le-instance-language-order, lem:instOrderedStructureOrder_formalTextbookModelTheory, lem:vector-notation, lem:vector-notation-under-composition}
 \end{proof}
 
 \begin{lemma}
@@ -61,7 +158,7 @@
 \end{lemma}
 \begin{proof}
     \leanok
-    \uses{def:le-instance-language-order, lem:vector-notation, lem:vector-notation-under-composition, lem:to-embedding}
+    \uses{lem:to-embedding}
 \end{proof}
 
 

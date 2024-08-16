@@ -28,70 +28,100 @@
 %%% Really trivial stuff about theories
 
 \begin{lemma}
-    \label{lem:realize-reflexivity}
-    \lean{FirstOrder.Language.Order.DLO.realize_reflexive}
+    \label{lem:reflexive_mem_dlo}
+    \lean{FirstOrder.Language.reflexive_mem_dlo}
     \leanok
-    Models of the theory of dense linear orders realize the reflexivity sentence.
+    The theory of dense linear orders contains the reflexive sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:realize-transitivity}
-    \lean{FirstOrder.Language.Order.DLO.realize_transitive}
+    \label{lem:transitive_mem_dlo}
+    \lean{FirstOrder.Language.transitive_mem_dlo}
     \leanok
-    Models of the theory of dense linear orders realize the transitivity sentence.
+    The theory of dense linear orders without end points contains the transitive sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:realize-antisymmetric}
-    \lean{FirstOrder.Language.Order.DLO.realize_antisymmetric}
+    \label{lem:antisymmetric_mem_dlo}
+    \lean{FirstOrder.Language.antisymmetric_mem_dlo}
     \leanok
-    Models of the theory of dense linear orders realize the antisymmetry sentence.
+    The theory of dense linear orders without end points contains the antisymmetric sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:realize-total}
-    \lean{FirstOrder.Language.Order.DLO.realize_total}
+    \label{lem:total_mem_dlo}
+    \lean{FirstOrder.Language.total_mem_dlo}
     \leanok
-    Models of the theory of dense linear orders realize the totality sentence.
+    The theory of dense linear orders without end points contains the total sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:realize-densely-ordered}
-    \lean{FirstOrder.Language.Order.DLO.realize_denselyOrderedSentence}
+    \label{lem:noBotOrder_mem_dlo}
+    \lean{FirstOrder.Language.noBotOrder_mem_dlo}
     \leanok
-    Models of the theory of dense linear orders realize the densely ordered sentence.
+    The theory of dense linear orders without end points contains the no bottom element sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:realize-no-min}
-    \lean{FirstOrder.Language.Order.DLO.realize_noBotOrderSentence}
+    \label{lem:noTopOrder_mem_dlo}
+    \lean{FirstOrder.Language.noTopOrder_mem_dlo}
     \leanok
-    Models of the theory of dense linear orders realize no minimum sentence.
+    The theory of dense linear orders without end points contains the no top element sentence.
 \end{lemma}
 \begin{proof}
     \leanok
 \end{proof}
 
 \begin{lemma}
-    \label{lem:realize-no-max}
-    \lean{FirstOrder.Language.Order.DLO.realize_noTopOrderSentence}
+    \label{lem:denselyOrdered_mem_dlo}
+    \lean{FirstOrder.Language.denselyOrdered_mem_dlo}
     \leanok
-    Models of the theory of dense linear orders realize no maximum sentence.
+    The theory of dense linear orders without end points contains the densely ordered sentence.
+\end{lemma}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}
+    \label{lem:realize_noBot}
+    \lean{FirstOrder.Language.Relations.realize_noBot}
+    \leanok
+    Models of the theory of dense linear orders without end points satisfies the no bottom element sentence.
+\end{lemma}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}
+    \label{lem:realize_noTop}
+    \lean{FirstOrder.Language.Relations.realize_noTop}
+    \leanok
+    Models of the theory of dense linear orders without end points satisfies the no top element sentence.
+\end{lemma}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{lemma}
+    \label{lem:realize_denselyOrdered}
+    \lean{FirstOrder.Language.Relations.realize_denselyOrdered}
+    \leanok
+    Models of the theory of dense linear orders without end points satisfies the densely ordered sentence.
 \end{lemma}
 \begin{proof}
     \leanok

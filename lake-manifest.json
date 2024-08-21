@@ -120,6 +120,13 @@
    "manifestFile": "lake-manifest.json",
    "inputRev": "main",
    "inherited": false,
+   "configFile": "lakefile.lean"},
+  {"type": "path",
+   "scope": "",
+   "name": "AutoBlueprint",
+   "manifestFile": "lake-manifest.json",
+   "inherited": false,
+   "dir": "/home/metinersin/projects/AutoBlueprint",
    "configFile": "lakefile.lean"}],
  "name": "FormalTextbookModelTheory",
  "lakeDir": ".lake"}

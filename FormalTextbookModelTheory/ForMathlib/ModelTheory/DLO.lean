@@ -96,7 +96,7 @@ def toLIso (φ : M ≃o N) : M ≃[Language.order] N where
 
 end
 
-namespace DLO --region
+namespace DLO
 
 section
 
@@ -108,25 +108,25 @@ instance instPreorder : Preorder M where
   le_refl := by
     apply Relations.realize_reflexive.mp
     apply realize_sentence_of_mem Language.order.dlo
-    simp only [reflexive_mem_dlo]
+    apply reflexive_mem_dlo
   le_trans := by
     apply Relations.realize_transitive.mp
     apply realize_sentence_of_mem Language.order.dlo
-    simp only [transitive_mem_dlo]
+    apply transitive_mem_dlo
 
 instance instPartialOrder : PartialOrder M where
   toPreorder := @instPreorder M instStructure instModel
   le_antisymm := by
     apply Relations.realize_antisymmetric.mp
     apply realize_sentence_of_mem Language.order.dlo
-    simp only [antisymmetric_mem_dlo]
+    apply antisymmetric_mem_dlo
 
 noncomputable instance instLinearOrder : LinearOrder M where
   toPartialOrder := @instPartialOrder M instStructure instModel
   le_total := by
     apply Relations.realize_total.mp
     apply realize_sentence_of_mem Language.order.dlo
-    simp only [total_mem_dlo]
+    apply total_mem_dlo
   decidableLE := by apply Classical.decRel
 
 -- @[simp]
@@ -145,7 +145,7 @@ instance : @NoBotOrder M instLinearOrder.toLE where
   exists_not_ge := by
     apply Relations.realize_noBot.mp
     apply realize_sentence_of_mem Language.order.dlo
-    simp only [noBotOrder_mem_dlo]
+    apply noBotOrder_mem_dlo
 
 instance : @NoMinOrder M instLinearOrder.toLT := NoBotOrder.to_noMinOrder M
 
@@ -153,7 +153,7 @@ instance : @NoTopOrder M instLinearOrder.toLE where
   exists_not_le := by
     apply Relations.realize_noTop.mp
     apply realize_sentence_of_mem Language.order.dlo
-    simp only [noTopOrder_mem_dlo]
+    apply noTopOrder_mem_dlo
 
 instance : @NoMaxOrder M instLinearOrder.toLT := NoTopOrder.to_noMaxOrder M
 
@@ -161,7 +161,7 @@ instance : @DenselyOrdered M instLinearOrder.toLT where
   dense := by
     apply Relations.realize_denselyOrdered.mp
     apply realize_sentence_of_mem Language.order.dlo
-    simp only [denselyOrdered_mem_dlo]
+    apply denselyOrdered_mem_dlo
 
 end
 
@@ -174,7 +174,7 @@ theorem aleph0_categorical_of_dlo : aleph0.Categorical Language.order.dlo := by
   have : Countable N := by apply mk_le_aleph0_iff.mp; rw [hN]
   apply iso_of_countable_dense
 
-end DLO --end
+end DLO
 
 end Order
 

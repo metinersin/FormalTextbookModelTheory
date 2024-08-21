@@ -12,8 +12,7 @@
 <meta name="generator" content="plasTeX" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Basic Definitions and Lemmas</title>
-<link rel="next" href="sect0002.html" title="Model Theory and The Rest of Mathlib" />
+<title>Formalization of the Textbook Model Theory</title>
 <link rel="prev" href="index.html" title="Formal Textbook of Model Theory" />
 <link rel="up" href="index.html" title="Formal Textbook of Model Theory" />
 <link rel="stylesheet" href="styles/theme-white.css" />
@@ -33,33 +32,14 @@
 <nav class="toc">
 <ul class="sub-toc-0">
 <li class=" active current">
-  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Basic Definitions and Lemmas</span></a>
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Formalization of the Textbook Model Theory</span></a>
   <span class="expand-toc">▼</span>
   <ul class="sub-toc-1 active">
      <li class="">
-  <a href="sect0001.html#a0000000005"><span class="toc_ref">1.1</span> <span class="toc_entry">Vectors</span></a>
- </li>
-<li class="">
-  <a href="sect0001.html#a0000000008"><span class="toc_ref">1.2</span> <span class="toc_entry">Theories</span></a>
+  <a href="sect0001.html#a0000000003"><span class="toc_ref">1.1</span> <span class="toc_entry">Main Results</span></a>
  </li>
 
   </ul>
- </li>
-<li class="">
-  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">Model Theory and The Rest of Mathlib</span></a>
-  <span class="expand-toc">▶</span>
-  <ul class="sub-toc-1">
-     <li class="">
-  <a href="sect0002.html#a0000000019"><span class="toc_ref">2.1</span> <span class="toc_entry">Instances</span></a>
- </li>
-<li class="">
-  <a href="sect0002.html#a0000000020"><span class="toc_ref">2.2</span> <span class="toc_entry">Homomorphisms</span></a>
- </li>
-
-  </ul>
- </li>
-<li class="">
-  <a href="sect0003.html"><span class="toc_ref">3</span> <span class="toc_entry">Main Result</span></a>
  </li>
 <li ><a href="dep_graph_document.html">Dependency graph</a></li>
 </ul>
@@ -70,14 +50,14 @@
 
 
 <div class="main-text">
-<h1 id="a0000000002">1 Basic Definitions and Lemmas</h1>
-<h1 id="a0000000005">1.1 Vectors</h1>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:vector-notation">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
+<h1 id="a0000000002">1 Formalization of the Textbook Model Theory</h1>
+<h1 id="a0000000003">1.1 Main Results</h1>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.Relations.realize_noTop">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
     </span>
-    <span class="lemma_thmlabel">1.1.1</span>
+    <span class="theorem_thmlabel">1.1.1</span>
     <div class="thm_header_extras">
 
     
@@ -85,590 +65,9 @@
         </div>
     <div class="thm_header_hidden_extras">
 
-    <a class="icon proof" href="sect0001.html#lem:vector-notation">#</a>
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Relations.realize_noTop">#</a>
     
-    <a class="icon proof" href="sect0001.html#a0000000006"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/Matrix.Vector_eq_VecNotation₂" class="lean_decl">Matrix.Vector_eq_VecNotation₂</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  For any vector \(v : \operatorname{Fin}2 \to X\), we have \(v = ![v(0), v(1)]\). </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000006">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:vector-notation-under-composition">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.1.2</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:vector-notation-under-composition">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000007"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/Matrix.comp_VecNotation₂" class="lean_decl">Matrix.comp_VecNotation₂</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  For any function \(f : X \to Y\) and elements \(x_1, x_2 \in X\), we have \(f \circ ![x_1, x_2] = ![f(x_1), f(x_2)]\). </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000007">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<h1 id="a0000000008">1.2 Theories</h1>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:reflexive_mem_dlo">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.1</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:reflexive_mem_dlo">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000009"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.reflexive_mem_dlo" class="lean_decl">FirstOrder.Language.reflexive_mem_dlo</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  The theory of dense linear orders contains the reflexive sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000009">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:transitive_mem_dlo">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.2</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:transitive_mem_dlo">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000010"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.transitive_mem_dlo" class="lean_decl">FirstOrder.Language.transitive_mem_dlo</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  The theory of dense linear orders without end points contains the transitive sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000010">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:antisymmetric_mem_dlo">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.3</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:antisymmetric_mem_dlo">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000011"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.antisymmetric_mem_dlo" class="lean_decl">FirstOrder.Language.antisymmetric_mem_dlo</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  The theory of dense linear orders without end points contains the antisymmetric sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000011">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:total_mem_dlo">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.4</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:total_mem_dlo">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000012"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.total_mem_dlo" class="lean_decl">FirstOrder.Language.total_mem_dlo</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  The theory of dense linear orders without end points contains the total sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000012">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:noBotOrder_mem_dlo">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.5</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:noBotOrder_mem_dlo">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000013"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.noBotOrder_mem_dlo" class="lean_decl">FirstOrder.Language.noBotOrder_mem_dlo</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  The theory of dense linear orders without end points contains the no bottom element sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000013">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:noTopOrder_mem_dlo">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.6</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:noTopOrder_mem_dlo">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000014"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.noTopOrder_mem_dlo" class="lean_decl">FirstOrder.Language.noTopOrder_mem_dlo</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  The theory of dense linear orders without end points contains the no top element sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000014">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:denselyOrdered_mem_dlo">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.7</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:denselyOrdered_mem_dlo">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000015"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.denselyOrdered_mem_dlo" class="lean_decl">FirstOrder.Language.denselyOrdered_mem_dlo</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  The theory of dense linear orders without end points contains the densely ordered sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000015">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:realize_noBot">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.8</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:realize_noBot">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000016"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
-</a>
-    
-    
-    
-    <button class="modal lean">L∃∀N</button>
-        <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-        
-        <ul class="uses">
-          
-          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Relations.realize_noBot" class="lean_decl">FirstOrder.Language.Relations.realize_noBot</a></li>
-          
-        </ul>
-    
-      </div>
-    </div>
-
-    
-        </div>
-  </div>
-  <div class="lemma_thmcontent">
-  <p>  Models of the theory of dense linear orders without end points satisfies the no bottom element sentence. </p>
-
-  </div>
-</div>
-<div class="proof_wrapper" id="a0000000016">
-  <div class="proof_heading">
-    <span class="proof_caption">
-    Proof
-    </span>
-    <span class="expand-proof">▶</span>
-  </div>
-  <div class="proof_content">
-  
-
-  </div>
-</div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:realize_noTop">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
-    </span>
-    <span class="lemma_thmlabel">1.2.9</span>
-    <div class="thm_header_extras">
-
-    
-    ✓
-        </div>
-    <div class="thm_header_hidden_extras">
-
-    <a class="icon proof" href="sect0001.html#lem:realize_noTop">#</a>
-    
-    <a class="icon proof" href="sect0001.html#a0000000017"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+    <a class="icon proof" href="sect0001.html#a0000000004"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
 </a>
     
     
@@ -694,12 +93,12 @@
     
         </div>
   </div>
-  <div class="lemma_thmcontent">
-  <p>  Models of the theory of dense linear orders without end points satisfies the no top element sentence. </p>
+  <div class="theorem_thmcontent">
+  
 
   </div>
 </div>
-<div class="proof_wrapper" id="a0000000017">
+<div class="proof_wrapper" id="a0000000004">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -711,12 +110,12 @@
 
   </div>
 </div>
-<div class="lemma_thmwrapper theorem-style-plain" id="lem:realize_denselyOrdered">
-  <div class="lemma_thmheading">
-    <span class="lemma_thmcaption">
-    Lemma
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
     </span>
-    <span class="lemma_thmlabel">1.2.10</span>
+    <span class="definition_thmlabel">1.1.2</span>
     <div class="thm_header_extras">
 
     
@@ -724,9 +123,435 @@
         </div>
     <div class="thm_header_hidden_extras">
 
-    <a class="icon proof" href="sect0001.html#lem:realize_denselyOrdered">#</a>
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory">#</a>
     
-    <a class="icon proof" href="sect0001.html#a0000000018"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+    <a class="icon proof" href="sect0001.html#a0000000005"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.orderStructure_of_LE">Theorem 1.1.16</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory" class="lean_decl">FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000005">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instPartialOrder">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.3</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instPartialOrder">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000006"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instPartialOrder" class="lean_decl">FirstOrder.Language.Order.DLO.instPartialOrder</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000006">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instPreorder">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.4</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instPreorder">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000007"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instPreorder" class="lean_decl">FirstOrder.Language.Order.DLO.instPreorder</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000007">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.5</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000008"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.noTopOrder_mem_dlo">Theorem 1.1.7</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Relations.realize_noTop">Theorem 1.1.1</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory" class="lean_decl">FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000008">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.toLEmbedding">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.6</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.toLEmbedding">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000009"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+          <li><a href="sect0001.html#Matrix.Vector_eq_VecNotation₂">Theorem 1.1.14</a></li>
+          
+          <li><a href="sect0001.html#Matrix.comp_VecNotation₂">Theorem 1.1.10</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory">Definition 1.1.2</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.toLEmbedding" class="lean_decl">FirstOrder.Language.Order.toLEmbedding</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000009">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.noTopOrder_mem_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.7</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.noTopOrder_mem_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000010"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.noTopOrder_mem_dlo" class="lean_decl">FirstOrder.Language.noTopOrder_mem_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000010">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.Relations.realize_denselyOrdered">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.8</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Relations.realize_denselyOrdered">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000011"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
 </a>
     
     
@@ -752,12 +577,1204 @@
     
         </div>
   </div>
-  <div class="lemma_thmcontent">
-  <p>  Models of the theory of dense linear orders without end points satisfies the densely ordered sentence. </p>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000011">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.antisymmetric_mem_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.9</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.antisymmetric_mem_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000012"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.antisymmetric_mem_dlo" class="lean_decl">FirstOrder.Language.antisymmetric_mem_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000012">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="Matrix.comp_VecNotation₂">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.10</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#Matrix.comp_VecNotation₂">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000013"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/Matrix.comp_VecNotation₂" class="lean_decl">Matrix.comp_VecNotation₂</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000013">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.instLE">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.11</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.instLE">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000014"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.instLE" class="lean_decl">FirstOrder.Language.Order.instLE</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000014">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.reflexive_mem_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.12</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.reflexive_mem_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000015"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.reflexive_mem_dlo" class="lean_decl">FirstOrder.Language.reflexive_mem_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000015">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.13</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000016"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.noBotOrder_mem_dlo">Theorem 1.1.18</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Relations.realize_noBot">Theorem 1.1.23</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory" class="lean_decl">FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000016">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="Matrix.Vector_eq_VecNotation₂">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.14</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#Matrix.Vector_eq_VecNotation₂">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000017"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/Matrix.Vector_eq_VecNotation₂" class="lean_decl">Matrix.Vector_eq_VecNotation₂</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000017">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.15</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000018"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo" class="lean_decl">FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
 
   </div>
 </div>
 <div class="proof_wrapper" id="a0000000018">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.orderStructure_of_LE">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.16</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.orderStructure_of_LE">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000019"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+          <li><a href="sect0001.html#Matrix.Vector_eq_VecNotation₂">Theorem 1.1.14</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.orderStructure_of_LE" class="lean_decl">FirstOrder.Language.Order.orderStructure_of_LE</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000019">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.toLIso">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.17</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.toLIso">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000020"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.toLEmbedding">Definition 1.1.6</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.instLE">Definition 1.1.11</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.toLIso" class="lean_decl">FirstOrder.Language.Order.toLIso</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000020">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.noBotOrder_mem_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.18</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.noBotOrder_mem_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000021"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.noBotOrder_mem_dlo" class="lean_decl">FirstOrder.Language.noBotOrder_mem_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000021">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.19</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000022"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.denselyOrdered_mem_dlo">Theorem 1.1.20</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Relations.realize_denselyOrdered">Theorem 1.1.8</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory" class="lean_decl">FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000022">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.denselyOrdered_mem_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.20</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.denselyOrdered_mem_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000023"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.denselyOrdered_mem_dlo" class="lean_decl">FirstOrder.Language.denselyOrdered_mem_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000023">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.total_mem_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.21</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.total_mem_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000024"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.total_mem_dlo" class="lean_decl">FirstOrder.Language.total_mem_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000024">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.22</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000025"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory">Definition 1.1.5</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory" class="lean_decl">FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000025">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.Relations.realize_noBot">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.23</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Relations.realize_noBot">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000026"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Relations.realize_noBot" class="lean_decl">FirstOrder.Language.Relations.realize_noBot</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000026">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="FirstOrder.Language.transitive_mem_dlo">
+  <div class="theorem_thmheading">
+    <span class="theorem_thmcaption">
+    Theorem
+    </span>
+    <span class="theorem_thmlabel">1.1.24</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.transitive_mem_dlo">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000027"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.transitive_mem_dlo" class="lean_decl">FirstOrder.Language.transitive_mem_dlo</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="theorem_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000027">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.25</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000028"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">Definition 1.1.26</a></li>
+          
+          <li><a href="sect0001.html#FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory">Definition 1.1.13</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory" class="lean_decl">FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000028">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-plain" id="FirstOrder.Language.Order.DLO.instLinearOrder">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.26</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sect0001.html#FirstOrder.Language.Order.DLO.instLinearOrder">#</a>
+    
+    <a class="icon proof" href="sect0001.html#a0000000029"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://metinersin.github.io/FormalTextbookModelTheory/docs/find/#doc/FirstOrder.Language.Order.DLO.instLinearOrder" class="lean_decl">FirstOrder.Language.Order.DLO.instLinearOrder</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000029">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -783,8 +1800,6 @@
   <a href="index.html" title="Formal Textbook of Model Theory"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
 </a>
   <a href="index.html" title="Formal Textbook of Model Theory"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
-</a>
-  <a href="sect0002.html" title="Model Theory and The Rest of Mathlib"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
 </a>
 </nav>
 

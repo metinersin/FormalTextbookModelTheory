@@ -1,0 +1,34 @@
+% In this file you should put the actual content of the blueprint.
+% It will be used both by the web and the print version.
+% It should *not* include the \begin{document}
+%
+% If you want to split the blueprint content into several files then
+% the current file can be a simple sequence of \input. Otherwise It
+% can start with a \section or \chapter for instance.
+
+% \begin{theorem}[Smale 1958]
+%     \label{thm:sphere_eversion}
+%     \lean{sphere_eversion}
+%     \leanok
+%     \uses{def:immersion}
+%     There is a homotopy of immersions of $𝕊^2$ into $ℝ^3$ from the inclusion map to
+%     the antipodal map $a : q ↦ -q$.
+% \end{theorem}
+    
+% \begin{proof}
+%     \leanok
+%     \uses{thm:open_ample, lem:open_ample_immersion}
+%     This obviously follows from what we did so far.
+% \end{proof}
+
+\chapter{Basic Definitions and Lemmas}
+
+\input{chapters/basics.tex}
+
+\chapter{Model Theory and The Rest of Mathlib}
+
+\input{chapters/model_theory.tex}
+
+\chapter{Main Result}
+
+\input{chapters/main.tex}

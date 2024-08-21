@@ -13,11 +13,13 @@ require "leanprover-community" / "mathlib"
 @[default_target]
 lean_lib «FormalTextbookModelTheory» where
 
--- lean_lib AutoBlueprint where
-  -- add any library configuration options here
-
 require checkdecls from git "https://github.com/PatrickMassot/checkdecls.git"
 
 meta if get_config? env = some "dev" then
 require «doc-gen4» from git
   "https://github.com/leanprover/doc-gen4" @ "main"
+
+-- require AutoBlueprint from git
+--   "https://github.com/metinersin/AutoBlueprint" @ "development"
+
+require AutoBlueprint from "/home/metinersin/projects/AutoBlueprint"

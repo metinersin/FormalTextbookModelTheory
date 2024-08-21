@@ -1,34 +1,256 @@
-% In this file you should put the actual content of the blueprint.
-% It will be used both by the web and the print version.
-% It should *not* include the \begin{document}
-%
-% If you want to split the blueprint content into several files then
-% the current file can be a simple sequence of \input. Otherwise It
-% can start with a \section or \chapter for instance.
+\begin{theorem}
+    \label{FirstOrder.Language.Relations.realize_noTop}
+    \lean{FirstOrder.Language.Relations.realize_noTop}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
 
-% \begin{theorem}[Smale 1958]
-%     \label{thm:sphere_eversion}
-%     \lean{sphere_eversion}
-%     \leanok
-%     \uses{def:immersion}
-%     There is a homotopy of immersions of $𝕊^2$ into $ℝ^3$ from the inclusion map to
-%     the antipodal map $a : q ↦ -q$.
-% \end{theorem}
-    
-% \begin{proof}
-%     \leanok
-%     \uses{thm:open_ample, lem:open_ample_immersion}
-%     This obviously follows from what we did so far.
-% \end{proof}
+\begin{definition}
+    \label{FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory}
+    \lean{FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{FirstOrder.Language.Order.instLE}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.instLE, FirstOrder.Language.Order.orderStructure_of_LE}
+\end{proof}
 
-\chapter{Basic Definitions and Lemmas}
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instPartialOrder}
+    \lean{FirstOrder.Language.Order.DLO.instPartialOrder}
+    \leanok
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instPreorder, FirstOrder.Language.antisymmetric_mem_dlo}
+\end{proof}
 
-\input{chapters/basics.tex}
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instPreorder}
+    \lean{FirstOrder.Language.Order.DLO.instPreorder}
+    \leanok
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.instLE, FirstOrder.Language.transitive_mem_dlo, FirstOrder.Language.reflexive_mem_dlo}
+\end{proof}
 
-\chapter{Model Theory and The Rest of Mathlib}
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory}
+    \lean{FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder, FirstOrder.Language.noTopOrder_mem_dlo, FirstOrder.Language.Relations.realize_noTop}
+\end{proof}
 
-\input{chapters/model_theory.tex}
+\begin{definition}
+    \label{FirstOrder.Language.Order.toLEmbedding}
+    \lean{FirstOrder.Language.Order.toLEmbedding}
+    \leanok
+    \uses{FirstOrder.Language.Order.instLE}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{Matrix.Vector_eq_VecNotation₂, Matrix.comp_VecNotation₂, FirstOrder.Language.Order.instLE, FirstOrder.Language.Order.instOrderedStructureOrder_formalTextbookModelTheory}
+\end{proof}
 
-\chapter{Main Result}
+\begin{theorem}
+    \label{FirstOrder.Language.noTopOrder_mem_dlo}
+    \lean{FirstOrder.Language.noTopOrder_mem_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
 
-\input{chapters/main.tex}
+\begin{theorem}
+    \label{FirstOrder.Language.Relations.realize_denselyOrdered}
+    \lean{FirstOrder.Language.Relations.realize_denselyOrdered}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.antisymmetric_mem_dlo}
+    \lean{FirstOrder.Language.antisymmetric_mem_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}
+    \label{Matrix.comp_VecNotation₂}
+    \lean{Matrix.comp_VecNotation₂}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}
+    \label{FirstOrder.Language.Order.instLE}
+    \lean{FirstOrder.Language.Order.instLE}
+    \leanok
+\end{definition}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.reflexive_mem_dlo}
+    \lean{FirstOrder.Language.reflexive_mem_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory}
+    \lean{FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder, FirstOrder.Language.noBotOrder_mem_dlo, FirstOrder.Language.Relations.realize_noBot}
+\end{proof}
+
+\begin{theorem}
+    \label{Matrix.Vector_eq_VecNotation₂}
+    \lean{Matrix.Vector_eq_VecNotation₂}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo}
+    \lean{FirstOrder.Language.Order.DLO.aleph0_categorical_of_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder, FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory, FirstOrder.Language.Order.toLIso, FirstOrder.Language.Order.instLE, FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory, FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory}
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.Order.orderStructure_of_LE}
+    \lean{FirstOrder.Language.Order.orderStructure_of_LE}
+    \leanok
+    \uses{FirstOrder.Language.Order.instLE}
+\end{theorem}
+\begin{proof}
+    \leanok
+    \uses{Matrix.Vector_eq_VecNotation₂, FirstOrder.Language.Order.instLE}
+\end{proof}
+
+\begin{definition}
+    \label{FirstOrder.Language.Order.toLIso}
+    \lean{FirstOrder.Language.Order.toLIso}
+    \leanok
+    \uses{FirstOrder.Language.Order.instLE}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.toLEmbedding, FirstOrder.Language.Order.instLE}
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.noBotOrder_mem_dlo}
+    \lean{FirstOrder.Language.noBotOrder_mem_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory}
+    \lean{FirstOrder.Language.Order.DLO.instDenselyOrdered_formalTextbookModelTheory}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder, FirstOrder.Language.denselyOrdered_mem_dlo, FirstOrder.Language.Relations.realize_denselyOrdered}
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.denselyOrdered_mem_dlo}
+    \lean{FirstOrder.Language.denselyOrdered_mem_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.total_mem_dlo}
+    \lean{FirstOrder.Language.total_mem_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory}
+    \lean{FirstOrder.Language.Order.DLO.instNoMaxOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder, FirstOrder.Language.Order.DLO.instNoTopOrder_formalTextbookModelTheory}
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.Relations.realize_noBot}
+    \lean{FirstOrder.Language.Relations.realize_noBot}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{theorem}
+    \label{FirstOrder.Language.transitive_mem_dlo}
+    \lean{FirstOrder.Language.transitive_mem_dlo}
+    \leanok
+\end{theorem}
+\begin{proof}
+    \leanok
+\end{proof}
+
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory}
+    \lean{FirstOrder.Language.Order.DLO.instNoMinOrder_formalTextbookModelTheory}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder}
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.Order.DLO.instLinearOrder, FirstOrder.Language.Order.DLO.instNoBotOrder_formalTextbookModelTheory}
+\end{proof}
+
+\begin{definition}
+    \label{FirstOrder.Language.Order.DLO.instLinearOrder}
+    \lean{FirstOrder.Language.Order.DLO.instLinearOrder}
+    \leanok
+\end{definition}
+\begin{proof}
+    \leanok
+    \uses{FirstOrder.Language.total_mem_dlo, FirstOrder.Language.Order.DLO.instPartialOrder}
+\end{proof}
+
